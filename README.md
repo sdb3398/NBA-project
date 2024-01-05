@@ -24,7 +24,7 @@ To check whether the residuals are normally distributed, one can rely on the QQ-
 
 I also conduct a study on outliers, high leverage points, and influential points. The only modification to the model is the removal of some outliers.
 
-# Coefficients
+## Coefficients
 
 The study of coefficients reveals that, for each regressor, the p-value relative to the t-test computed to determine whether the estimated coefficient is equal to 0 (H0) or different from 0 (H1) is below the threshold of 0.05. Hence, there is evidence against the null hypothesis for all predictors, concluding that all estimated coefficients are different from 0.
 
