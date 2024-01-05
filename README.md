@@ -10,6 +10,8 @@ response variable and it represents the average number of points scored. In othe
 analysis is to identify which statistics of the players have a significant impact on the average number of
 points scored and the magnitude of their impact.
 
+## First model
+
 First of all I create the model with all the covariates; most of them are statistically significant (a low p-value) and so
 they can be used for the best model. But, we must perform a best subset selection to identify the set of
 predictors that are most relevant for predicting the response for each possible number of parameters (in this
