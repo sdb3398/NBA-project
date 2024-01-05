@@ -33,3 +33,12 @@ The variance of the residuals, which should be constant, is heterogeneous: the p
 
 To check whether the residuals are normally distributed, one can rely on the QQ-plot and on the Shapiro-Wilk test: both this tools shows that this property is not satisfied, since form the graph it’s clear that the residuals distribution has long tails and the p-value obtained from the test is close to 0;
 this problem can be addressed by implementing a non parametric test.
+
+I make also a study for the outliers, high leverage points and influential points. The only modification at the model is that I remove some outliers.
+
+# Coefficients
+
+The study of the coefficients tells us that, for each regressor, the p-value relative to the t-test computed
+to determine whether the estimated coefficient is equal to 0 (H0) or different from 0 (H1): since all of them
+are below the threshold of 0.05, for all the predictors there is evidence against the null hypothesis, so the
+conclusion is that all the estimated coefficient are different from 0.
