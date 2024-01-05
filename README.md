@@ -28,56 +28,13 @@ I also conduct a study on outliers, high leverage points, and influential points
 
 The study of coefficients reveals that, for each regressor, the p-value relative to the t-test computed to determine whether the estimated coefficient is equal to 0 (H0) or different from 0 (H1) is below the threshold of 0.05. Hence, there is evidence against the null hypothesis for all predictors, concluding that all estimated coefficients are different from 0.
 
+## Goodness of fit
 
+The 98.87% of the variability of log(pts) is explained by the best model. The standard deviation of the model is 0.078, therefore every prediction on the response should be considered in the range ±0.078.
 
+## Predictions and simulation of data points
 
+I make a prediction on a new player which was not included in the dataset NBA used to fit the model and the result are pretty good.
 
+I also simulate 167 new fitted values of log(pts), predicted using the best model. To check how far are the predictions made by the model from the actual data points contained in the dataset. I use the MSE that offers a measure of the average squared difference between the actual and simulated data points: in this case the model provides a relatively good fit to the data, because, on average, the difference between actual and simulated points is relatively small.
 
-
-
-
-
-# NBA-project
-The study is based on the dataset that refers to NBA players from kaggle [kaggle] (https://www.kaggle.com/
-datasets/justinas/nba-players-data). This data set contains over two decades of data on each player who
-has been part of an NBA teams’ roster. It captures demographic variables such as age, height, weight and
-place of birth, biographical details like the team played for, draft year and round. In addition, it has basic
-box score statistics such as games played, average number of points, rebounds, assists, etc..
-The goal of this project is to rely on a linear regression model to explore associations between the
-response (the dependent variable) and some predictors (independent). I choose the variable “pts” as my
-response variable and it represents the average number of points scored. In other words the aim of this
-analysis is to identify which statistics of the players have a significant impact on the average number of
-points scored and the magnitude of their impact.
-
-## First model
-
-First of all I create the model with all the covariates; most of them are statistically significant (a low p-value) and so
-they can be used for the best model. But, we must perform a best subset selection to identify the set of
-predictors that are most relevant for predicting the response for each possible number of parameters (in this
-case from 1 to 13).
-
-## Best model
-
-the following step is to determine which is
-the optimal number of regressors that must be used to fit the model. This decision can be taken by using
-different criteria: the BIC, the AIC, the Cp Mallow’s and the adjusted R2.
-
-For the Occam’s razor principle, the best model is the one with 7 predictors.
-
-## Potential issues
-
-Making a study related to the VIF, I see that there are not collinearity problems because all the VIF values are below the treshold.
-
-The variance of the residuals, which should be constant, is heterogeneous: the plot of the fitted values against the residuals isn’t a null plot, the residuals are not randomly located. A remedy for non constant variance is to transform the response variable.
-
-To check whether the residuals are normally distributed, one can rely on the QQ-plot and on the Shapiro-Wilk test: both this tools shows that this property is not satisfied, since form the graph it’s clear that the residuals distribution has long tails and the p-value obtained from the test is close to 0;
-this problem can be addressed by implementing a non parametric test.
-
-I make also a study for the outliers, high leverage points and influential points. The only modification at the model is that I remove some outliers.
-
-# Coefficients
-
-The study of the coefficients tells us that, for each regressor, the p-value relative to the t-test computed
-to determine whether the estimated coefficient is equal to 0 (H0) or different from 0 (H1): since all of them
-are below the threshold of 0.05, for all the predictors there is evidence against the null hypothesis, so the
-conclusion is that all the estimated coefficient are different from 0.
