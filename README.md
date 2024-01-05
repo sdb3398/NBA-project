@@ -1,6 +1,6 @@
 # NBA-project
 
-This project is based on a dataset related to NBA players available on Kaggle [kaggle](https://www.kaggle.com/datasets/justinas/nba-players-data). The dataset contains information on each player who has been part of an NBA team's roster for over two decades. It includes demographic variables such as age, height, weight, and place of birth, as well as biographical details like the team played for, draft year, and round. Additionally, it provides basic box score statistics such as games played, average points, rebounds, assists, etc.
+This project is based on a dataset related to NBA players available on Kaggle [NBA dataset](https://www.kaggle.com/datasets/justinas/nba-players-data). The dataset contains information on each player who has been part of an NBA team's roster for over two decades. It includes demographic variables such as age, height, weight, and place of birth, as well as biographical details like the team played for, draft year, and round. Additionally, it provides basic box score statistics such as games played, average points, rebounds, assists, etc.
 
 The goal of this project is to rely on a linear regression model to explore associations between the response (dependent variable) and certain predictors (independent variables). I have chosen the variable "pts" as my response variable, representing the average number of points scored. In other words, the analysis aims to identify which player statistics significantly impact the average number of points scored and the magnitude of their impact.
 
